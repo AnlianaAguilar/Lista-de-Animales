@@ -23,4 +23,5 @@ export default class Mascota extends Animal{
         return this._enfermedad = ()=>new_enfermedad
     }
     
+
 }
