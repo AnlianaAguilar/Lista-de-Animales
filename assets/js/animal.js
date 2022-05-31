@@ -7,7 +7,7 @@ export default class Animal extends Propietario{
     }
 
     get tipo(){
-        let tipoMascota = `El tipo de animal es un: ${this._tipo()}` 
+        let tipoMascota = `El tipo de animal es un: ${this._tipo()}` // si necesitara solo el dato debo realizar una funcion
         return tipoMascota
     }
 

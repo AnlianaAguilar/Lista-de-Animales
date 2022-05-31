@@ -1,5 +1,5 @@
-import Propietario from "./propietario.js";
-import Animal from "./animal.js";
+// import Propietario from "./propietario.js";
+// import Animal from "./animal.js";
 import Mascota from "./mascota.js";
 
 
@@ -19,8 +19,6 @@ formulario.addEventListener("submit", (event)=>{
     let tipo = document.getElementById("tipo").value
     let enfermedad = document.getElementById("enfermedad").value
 
-
-    
     if(tipo=="perro"){
         let perro = new Mascota(dueño,direccion,telefono,tipo,nombreMascota,enfermedad)
         document.querySelector("ul").innerHTML = `<li>${perro.datosPropietario()}</li> <li>${perro.tipo}, mientras que el nombre de la mascota es ${perro.nombreMascota} y la enfermedad es: ${perro.enfermedad}</li>`
@@ -31,6 +29,7 @@ formulario.addEventListener("submit", (event)=>{
         let conejo = new Mascota(dueño,direccion,telefono,tipo,nombreMascota,enfermedad)
         document.querySelector("ul").innerHTML = `<li>${conejo.datosPropietario()}</li> <li>${conejo.tipo}, mientras que el nombre de la mascota es ${conejo.nombreMascota} y la enfermedad es: ${conejo.enfermedad}</li>`
     }
+    limpiar()
 
     // let mascota1 = new Mascota(dueño,direccion,telefono,tipo,nombreMascota,enfermedad)
     // console.log(mascota1)
@@ -39,3 +38,11 @@ formulario.addEventListener("submit", (event)=>{
     // document.querySelector("ul").innerHTML = `<li>${mascota1.datosPropietario()}</li> <li>${mascota1.tipo}, mientras que el nombre de la mascota es ${nombreMascota} y la enfermedad es: ${enfermedad}</li>`
 })
 
+let limpiar = () => {
+    document.getElementById("propietario").value = ""
+    document.getElementById("telefono").value = ""
+    document.getElementById("direccion").value = ""
+    document.getElementById("nombreMascota").value = ""
+    document.getElementById("tipo").value = ""
+    document.getElementById("enfermedad").value = ""
+}
