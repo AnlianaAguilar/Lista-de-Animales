@@ -1,17 +1,18 @@
-export default class Mascota{
-    constructor(nombre, direccion, telefono, tipo, nombre, enfermedad){
+import Animal from "./animal.js"
+export default class Mascota extends Animal{
+    constructor(nombre, direccion, telefono, tipo, nombreMascota, enfermedad){
        super(nombre, direccion, telefono, tipo)
-       this._nombre = ()=>nombre
+       this._nombreMascota = ()=>nombreMascota
        this._enfermedad = ()=>enfermedad
 
     }
 
-    get nombre(){
-        return this._nombre()
+    get nombreMascota(){
+        return this._nombreMascota()
     }
 
-    set nombre(new_nombre){
-        return this._nombre = ()=>new_nombre
+    set nombreMascota(new_nombreMascota){
+        return this._nombreMascota = ()=>new_nombreMascota
     }
 
     get enfermedad(){
